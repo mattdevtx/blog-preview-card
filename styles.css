@@ -1,0 +1,153 @@
+/* 
+============
+fonts
+============
+*/
+
+@font-face {
+	font-family: 'Figtree';
+	src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+/* 
+============
+variables
+============
+*/
+
+:root {
+	--pri-ylw: hsl(47, 88%, 63%);
+	--neu-white: hsl(0, 0%, 100%);
+	--neu-grey: hsl(0, 0%, 50%);
+	--neu-black: hsl(0, 0%, 7%);
+	--radius: 16px;
+	--transition: all 0.2s ease;
+	--spacing: 2px;
+}
+
+/* 
+============
+reset
+============
+*/
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 
+=============
+global styles
+=============
+*/
+
+body {
+	height: 100vh;
+	background: var(--pri-ylw);
+	display: grid;
+	place-items: center;
+	font-family: 'Figtree', sans-serif;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+/* 
+=============
+class styles
+=============
+*/
+
+.card {
+	background: var(--neu-white);
+	border: 1px solid var(--neu-black);
+	border-radius: var(--radius);
+	box-shadow: 8px 8px var(--neu-black);
+	width: 325px;
+	/* min-height: 500px; */
+	padding: 1.25rem;
+	margin-bottom: 0.5rem;
+	transition: var(--transition);
+	pointer-events: none;
+}
+
+.card__illustration {
+	border-radius: 10px;
+	margin-bottom: 1.25rem;
+}
+
+.card-info__subject {
+	background: var(--pri-ylw);
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	font-weight: 800;
+	text-transform: capitalize;
+	border-radius: 5px;
+}
+
+.card-info__subject,
+.card-info__date {
+	font-size: 14px;
+	margin-bottom: 0.85rem;
+}
+
+.card-info__title {
+	font-size: 1.25rem;
+	font-weight: 800;
+	transition: var(--transition);
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.card:hover {
+	box-shadow: 12px 12px var(--neu-black);
+	margin-bottom: 1rem;
+}
+
+.card:hover .card-info__title {
+	color: var(--pri-ylw);
+}
+
+.card-info__text {
+	color: var(--neu-grey);
+	padding: 1rem 0;
+	font-size: 0.9rem;
+	line-height: 1.25rem;
+}
+
+.card-info__member {
+	max-width: 8.5rem;
+	margin: 0.5rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.member-img {
+	width: 32px;
+}
+
+.member-name {
+	text-transform: capitalize;
+	font-weight: 800;
+}
+
+/* 
+============
+attribution
+============
+*/
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
